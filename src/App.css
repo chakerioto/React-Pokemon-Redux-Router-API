@@ -24,3 +24,16 @@ nav a {
   margin: auto;
   width: 90%;
 }
+
+.poke-data a {
+  color: black;
+}
+.poke-data .pokemon-item {
+  margin: 10px 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border: 2px solid coral;
+  padding: 10px;
+  border-radius: 7px;
+}
