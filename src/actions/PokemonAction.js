@@ -9,7 +9,7 @@ export const GetPokemonList = page => async dispatch => {
     const perPage = 15;
     const offset = page * 15;
     const res = await axios.get(
-      `https://pokeapi.co/api/v2/pokemon?limit={perPage}&offset={offset}`
+      `https://pokeapi.co/api/v2/pokemon?limit=${perPage}&offset=${offset}`
     );
 
     dispatch({
@@ -29,19 +29,16 @@ export const GetPokemon = pokemon => async dispatch => {
       type: 'POKEMON_MULTIPLE_LOADING',
     });
 
-    const res = await axios.get(
-      `https://pokeapi.co/api/v2/pokemon/${pokemon}`
-    );
+    const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
 
     dispatch({
       type: 'POKEMON_MULTIPLE_SUCCESS',
       payload: res.data,
-      pokemonName: pokemon
+      pokemonName: pokemon,
     });
   } catch (e) {
     dispatch({
       type: 'POKEMON_MULTIPLE_FAIL',
     });
   }
-
-}
+};

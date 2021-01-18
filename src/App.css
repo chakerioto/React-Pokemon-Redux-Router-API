@@ -37,3 +37,32 @@ nav a {
   padding: 10px;
   border-radius: 7px;
 }
+.poke {
+  width: 90%;
+  margin: auto;
+}
+.pokemon-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.pokemon-wrapper .item {
+  width: 30%;
+}
+.search-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.pagination {
+  margin: auto;
+
+  margin-top: 66px;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
